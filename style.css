@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    /*
+    width: 500px;
+    height: 100px;
+    */
+}
+
+@media (max-width: 600px) {
+    section {
+        flex-basis: 100%;
+    }
+}
+
+@media (max-width: 800px) and (min-width: 601px) {
+    section:nth-child(-n+2) {
+        flex-basis: 100%;
+    }
+    /* not sure these are firing correctly */
+    section:nth-child(3),
+    section:nth-child(4),
+    section:nth-child(5) {
+        flex-basis: 33.33%;
+    }
+
+    section:nth-child(6),
+    section:nth-child(7) {
+        flex-basis: 100%;
+    }
+}
+
+@media (min-width: 801px) {
+    section:nth-child(-n+2) {
+        flex-basis: 50%;
+    }
+
+    section:nth-child(3),
+    section:nth-child(4),
+    section:nth-child(5) {
+        flex-basis: 33.33%;
+    }
+
+    section:nth-child(6),
+    section:nth-child(7) {
+        flex-basis: 50%;
+    }
+}
+

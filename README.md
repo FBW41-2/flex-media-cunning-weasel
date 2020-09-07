@@ -29,5 +29,3 @@ Images for reference:
 -   Use **Git properly**
 -   Feel free to document your code with comments.
 
-
-
